@@ -25,7 +25,7 @@ SECRET_KEY = 'fyr7^iv$$(5fl6z*2)xbv!v2uq!r*nn8-sm8pxn=psh(kro_%+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[env('RENDER_EXTERNAL_HOSTNAME', default='')])
 
 
 # Application definition
